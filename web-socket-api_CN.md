@@ -1202,7 +1202,7 @@ NONE
 }
 ```
 
-### 历史交易
+### 历史交易 (MARKET_DATA)
 
 ```javascript
 {
@@ -1211,7 +1211,8 @@ NONE
   "params": {
     "symbol": "BNBBTC",
     "fromId": 0,
-    "limit": 1
+    "limit": 1,
+    "apiKey": "vmPUZE6mv9SD5VNHk4HlWFsOr6aKE2zvsw0MuIgwCIPy6utIco14y7Ju91duEh8A"
   }
 }
 ```
@@ -1228,6 +1229,7 @@ NONE
 `symbol`  | STRING  | YES       |
 `fromId`  | INT     | NO        | 起始交易ID
 `limit`   | INT     | NO        | 默认 500; 最大值 1000
+`apiKey`  | STRING  | YES       |
 
 备注：
 
@@ -2972,7 +2974,6 @@ days    | `1d`, `2d` ... `7d`
     "orderId": 12569099453,
     "orderListId": -1,                              // OCO订单的ID，不然就是 -1
     "clientOrderId": "91fe37ce9e69c90d6358c0",      // 请求的 newClientOrderId
-    "transactTime": 1684804350068,
     "price": "23416.10000000",
     "origQty": "0.00847000",
     "executedQty": "0.00001000",
@@ -3034,7 +3035,6 @@ days    | `1d`, `2d` ... `7d`
         "orderId": 12569099453,
         "orderListId": 19431,
         "clientOrderId": "OFFXQtxVFZ6Nbcg4PgE2DA",
-        "transactTime": 1684804350068,
         "price": "23450.50000000",
         "origQty": "0.00850000"
         "executedQty": "0.00000000",
@@ -3052,7 +3052,6 @@ days    | `1d`, `2d` ... `7d`
         "orderId": 12569099454,
         "orderListId": 19431,
         "clientOrderId": "OFFXQtxVFZ6Nbcg4PgE2DA",
-        "transactTime": 1684804350068,
         "price": "23400.00000000",
         "origQty": "0.00850000"
         "executedQty": "0.00000000",
@@ -3399,7 +3398,6 @@ days    | `1d`, `2d` ... `7d`
       "orderId": 125690984230,
       "orderListId": -1,
       "clientOrderId": "91fe37ce9e69c90d6358c0",      // 请求的 cancelNewClientOrderId
-      "transactTime": 1684804350068,
       "price": "23450.00000000",
       "origQty": "0.00847000",
       "executedQty": "0.00001000",
@@ -3518,7 +3516,6 @@ days    | `1d`, `2d` ... `7d`
         "orderId": 125690984230,
         "orderListId": -1,
         "clientOrderId": "91fe37ce9e69c90d6358c0",
-        "transactTime": 1684804350068,
         "price": "23450.00000000",
         "origQty": "0.00847000",
         "executedQty": "0.00001000",
@@ -3853,7 +3850,6 @@ days    | `1d`, `2d` ... `7d`
           "orderId": 12569099453,
           "orderListId": 19431,
           "clientOrderId": "OFFXQtxVFZ6Nbcg4PgE2DA",
-          "transactTime": 1684804350068,
           "price": "23450.50000000",
           "origQty": "0.00850000",
           "executedQty": "0.00000000",
@@ -3871,7 +3867,6 @@ days    | `1d`, `2d` ... `7d`
           "orderId": 12569099454,
           "orderListId": 19431,
           "clientOrderId": "OFFXQtxVFZ6Nbcg4PgE2DA",
-          "transactTime": 1684804350068,
           "price": "23400.00000000",
           "origQty": "0.00850000",
           "executedQty": "0.00000000",
@@ -4494,7 +4489,6 @@ days    | `1d`, `2d` ... `7d`
     },
     "brokered": false,
     "requireSelfTradePrevention": false,
-    "preventSor": false,
     "updateTime": 1660801833000,
     "accountType": "SPOT",
     "balances": [
@@ -4516,8 +4510,7 @@ days    | `1d`, `2d` ... `7d`
     ],
     "permissions": [
       "SPOT"
-    ],
-    "uid": 354937868
+    ]
   },
   "rateLimits": [
     {
